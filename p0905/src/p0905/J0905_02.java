@@ -1,6 +1,6 @@
 package p0905;
 
-public class J0904_02 {
+public class J0905_02 {
 
 	public static void main(String[] args) {
 		// 1부터 10까지의 순번과 합을 출력하시오.
