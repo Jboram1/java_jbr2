@@ -7,6 +7,7 @@ public class J0904_10_성적폼 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
+		
 		System.out.println("[ 학생성적 프로그램 ]");
 		System.out.println("1. 성적입력");
 		System.out.println("2. 성적출력");
