@@ -1,0 +1,88 @@
+package p0921;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class ColAction {
+	
+	Card[] card = new Card[52];
+	String[] shape = {"Spade","Heart","Diamond","Clover"}; 
+	ArrayList<StuScore> list = new ArrayList();
+	ArrayList<Car> list2 = new ArrayList();
+	HashMap<String, Object> map = new HashMap();
+	
+	
+	//학생3명 리턴
+	HashMap<String, Object> scoreAll() {
+		//3명
+		list.add(new StuScore("홍길동",100,90,90));
+		list.add(new StuScore("유관순",90,90,100));
+		list.add(new StuScore("정보람",100,100,80));
+		
+		//3대
+		list2.add(new Car("white",5));
+		list2.add(new Car("red",4));
+		list2.add(new Car("black",5));
+		
+		map.put("list",list);
+		map.put("list2",list2);
+		
+		return map;
+	}
+	
+	
+	
+	//학생3명 리턴
+//	ArrayList<Car> scoreAll() {
+//		//3명
+//		list.add(new StuScore("홍길동",100,90,90));
+//		list.add(new StuScore("유관순",90,90,100));
+//		list.add(new StuScore("정보람",100,100,80));
+//		
+//		
+//		//3대
+//		list2.add(new Car("white",5));
+//		list2.add(new Car("red",4));
+//		list2.add(new Car("black",5));
+//		
+//		map.put("list",list);
+//		map.put("list2",list2);
+//		
+//		return list2;
+//	}
+	
+	
+	
+	
+	
+	void cardAll() {
+		//1-13
+		//Spade,Heart,Diamond,Clover
+		//52장의 카드를 생성하시오.
+		
+		for(int i=0;i<card.length;i++) {
+			int number = i%13+1; //1,2,3,4,....13
+			String kind = shape[i/13];
+			card[i] = new Card(number,kind);
+		}
+	}
+	
+	
+	//52장 리턴
+	Card[] cardInsert() { //인스턴스 메소드
+		cardAll(); //52장 card참조변수
+		return card;
+	}
+
+
+	//카드1장리턴
+//	Card[] cardInsert() { //인스턴스 메소드
+//		cardAll(); //52장 card참조변수
+//		Card c = new Card();
+//		c.setNumber(1);
+//		c.setKind("spade");
+//		return c;
+//	}
+	
+	
+}
