@@ -1,4 +1,4 @@
-package p0922_02;
+package p0925;
 
 public class StuScore {
 	
